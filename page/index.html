@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>vates Betting Club | Pata Ushindi wa Laki 5 Kwa Siku</title>
+  <!-- Tailwind CSS v3 + Font Awesome Icons + Google Fonts (Inter) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom config to extend sky theme and realistic shadows -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sky: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02)',
+            'card': '0 20px 35px -12px rgba(0, 0, 0, 0.1)',
+            'glow': '0 0 15px rgba(14, 165, 233, 0.3)',
+          },
+          animation: {
+            'float': 'float 3s ease-in-out infinite',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    /* Remove scroll bar completely while keeping scroll functionality */
+    html, body {
+      scroll-behavior: smooth;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    /* Hide scrollbar for Chrome, Safari and Edge */
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for Firefox */
+    html {
+      scrollbar-width: none;
+    }
+    /* IE and Edge */
+    body {
+      -ms-overflow-style: none;
+    }
+    
+    /* subtle custom smooth */
+    .gradient-text {
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .bg-grid {
+      background-image: radial-gradient(circle at 1px 1px, rgba(14,165,233,0.08) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .btn-ripple:active {
+      transform: scale(0.97);
+      transition: transform 0.1s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-sky-50 via-white to-sky-100 font-sans antialiased">
+
+  <!-- MAIN LANDING PAGE CONTAINER -->
+  <main class="max-w-5xl mx-auto px-5 md:px-8 py-8 md:py-12 relative">
+    
+    <!-- Decorative floating elements for realism -->
+    <div class="absolute top-20 left-0 w-64 h-64 bg-sky-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-slow -z-10"></div>
+    <div class="absolute bottom-20 right-0 w-80 h-80 bg-sky-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-slow delay-1000 -z-10"></div>
+    
+    <!-- ========= 1. LOGO & BRAND (simple but premium) ========= -->
+    <div class="flex justify-center mb-6 md:mb-8">
+      <div class="bg-white/50 backdrop-blur-sm rounded-full px-6 py-2 shadow-soft border border-sky-200">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-gradient-to-br from-sky-500 to-sky-700 rounded-lg flex items-center justify-center shadow-sm">
+            <span class="text-white text-sm font-black">⚡</span>
+          </div>
+          <span class="font-bold text-sky-800 tracking-tight">Vates<span class="text-sky-600">Bet</span> Club</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========= 2. HEADLINE + BENEFIT (CLEAR HOOK) ========= -->
+    <div class="text-center max-w-3xl mx-auto mb-10 md:mb-14">
+      <div class="inline-flex items-center gap-2 bg-sky-100/80 backdrop-blur-sm px-4 py-1.5 rounded-full border border-sky-200 shadow-soft mb-6">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+        </span>
+        <span class="text-xs font-semibold text-sky-700 uppercase tracking-wide">🔥 Active members: 3,240+ winning</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-800 leading-tight">
+        Pata Ushindi wa 
+        <span class="gradient-text bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text">Laki 5+</span> 
+        kwa Siku!
+      </h1>
+      <p class="text-lg md:text-xl text-slate-600 mt-5 max-w-2xl mx-auto">
+        Jiunge na wanaobet kitaalamu tunawapa tips za uhakika za Over 2.5, BTTS, na 1X2 kila siku.
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center mt-6">
+        <div class="flex items-center gap-1.5 bg-white/70 rounded-full px-4 py-1.5 shadow-soft">
+          <span class="text-green-500 text-lg">✓</span><span class="text-sm font-medium text-slate-700">Win rate 78%</span>
+        </div>
+        <div class="flex items-center gap-1.5 bg-white/70 rounded-full px-4 py-1.5 shadow-soft">
+          <span class="text-green-500 text-lg">✓</span><span class="text-sm font-medium text-slate-700">Odds 1.80+</span>
+        </div>
+        <div class="flex items-center gap-1.5 bg-white/70 rounded-full px-4 py-1.5 shadow-soft">
+          <span class="text-green-500 text-lg">✓</span><span class="text-sm font-medium text-slate-700">Daily 10+ tips</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========= 3. ARTWORK / PROOF SECTION (realistic winning screenshots simulated) ========= -->
+    <div class="mb-16 md:mb-20">
+      <div class="text-center mb-6">
+        <span class="text-sm font-semibold text-sky-600 bg-sky-100 px-4 py-1 rounded-full">Ushindi Halisi • Screenshots za Wanachama</span>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mt-3">Angalia ushindi wa wanachama wetu</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl shadow-card border border-sky-100 overflow-hidden transition-all duration-300 hover:shadow-xl">
+          <div class="bg-gradient-to-r from-sky-50 to-sky-100 px-4 py-3 flex justify-between items-center border-b border-sky-200">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-xs">JM</div>
+              <div><p class="text-sm font-semibold text-slate-700">Juma M.</p><p class="text-[10px] text-slate-400">Dar es Salaam</p></div>
+            </div>
+            <span class="text-[11px] font-mono text-sky-600 bg-white px-2 py-0.5 rounded-full shadow-sm">Betika</span>
+          </div>
+          <div class="p-4 flex flex-col items-center">
+            <div class="w-full bg-slate-100 rounded-xl p-3 text-center border border-dashed border-sky-300">
+              <p class="text-xl font-black text-green-600">+TSh 347,500</p>
+              <p class="text-xs text-slate-500">Mechi: Liverpool vs Arsenal ➜ Over 2.5 @1.95</p>
+              <div class="mt-2 flex justify-center gap-1">
+                <span class="inline-block w-16 h-8 bg-green-500/20 rounded-md text-green-700 text-[10px] font-bold flex items-center justify-center">WIN</span>
+                <span class="inline-block w-16 h-8 bg-slate-200 rounded-md text-slate-600 text-[10px] flex items-center justify-center">Stake: 180k</span>
+              </div>
+            </div>
+            <p class="text-[11px] text-slate-400 mt-2">💬 "Nimeanza wiki 2 tu, leo nimechomoa laki 3!"</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl shadow-card border border-sky-100 overflow-hidden transition-all duration-300 hover:shadow-xl">
+          <div class="bg-gradient-to-r from-sky-50 to-sky-100 px-4 py-3 flex justify-between items-center border-b border-sky-200">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs">AK</div>
+              <div><p class="text-sm font-semibold text-slate-700">Aisha K.</p><p class="text-[10px] text-slate-400">Mwanza</p></div>
+            </div>
+            <span class="text-[11px] font-mono text-sky-600 bg-white px-2 py-0.5 rounded-full shadow-sm">M-bet</span>
+          </div>
+          <div class="p-4 flex flex-col items-center">
+            <div class="w-full bg-slate-100 rounded-xl p-3 text-center border border-dashed border-sky-300">
+              <p class="text-xl font-black text-green-600">+TSh 512,800</p>
+              <p class="text-xs text-slate-500">Mechi: Real Madrid vs Bayern ➜ BTTS @1.85</p>
+              <div class="mt-2 flex justify-center gap-1">
+                <span class="inline-block w-16 h-8 bg-green-500/20 rounded-md text-green-700 text-[10px] font-bold flex items-center justify-center">WIN</span>
+                <span class="inline-block w-16 h-8 bg-slate-200 rounded-md text-slate-600 text-[10px] flex items-center justify-center">Stake: 280k</span>
+              </div>
+            </div>
+            <p class="text-[11px] text-slate-400 mt-2">💬 "Group hili ni legit kabisa! Napata combo za uhakika"</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl shadow-card border border-sky-100 overflow-hidden transition-all duration-300 hover:shadow-xl">
+          <div class="bg-gradient-to-r from-sky-50 to-sky-100 px-4 py-3 flex justify-between items-center border-b border-sky-200">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 font-bold text-xs">IH</div>
+              <div><p class="text-sm font-semibold text-slate-700">Iddi H.</p><p class="text-[10px] text-slate-400">Arusha</p></div>
+            </div>
+            <span class="text-[11px] font-mono text-sky-600 bg-white px-2 py-0.5 rounded-full shadow-sm">Sportybet</span>
+          </div>
+          <div class="p-4 flex flex-col items-center">
+            <div class="w-full bg-slate-100 rounded-xl p-3 text-center border border-dashed border-sky-300">
+              <p class="text-xl font-black text-green-600">+TSh 1,210,000</p>
+              <p class="text-xs text-slate-500">Mechi: Man City vs Chelsea ➜ 1X2 (1) @2.10</p>
+              <div class="mt-2 flex justify-center gap-1">
+                <span class="inline-block w-16 h-8 bg-green-500/20 rounded-md text-green-700 text-[10px] font-bold flex items-center justify-center">WIN</span>
+                <span class="inline-block w-16 h-8 bg-slate-200 rounded-md text-slate-600 text-[10px] flex items-center justify-center">Stake: 580k</span>
+              </div>
+            </div>
+            <p class="text-[11px] text-slate-400 mt-2">💬 "Nimechukua jackpot ya wiki hii asanteni sana!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========= 4. WHY PEOPLE SHOULD JOIN (BENEFITS + REASONS) ========= -->
+    <div class="mb-16 md:mb-20 bg-white/40 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-sky-200 shadow-soft">
+      <div class="text-center mb-8">
+        <span class="text-sm font-semibold text-sky-600 bg-sky-100 px-4 py-1 rounded-full">Kwa nini wanachama 3,000+ wanatuamini?</span>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mt-3">Kwa Nini Ujiunge Nasi?</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-7">
+        <div class="flex flex-col items-center text-center p-4 rounded-xl bg-white/60 shadow-sm">
+          <div class="w-14 h-14 bg-sky-100 rounded-2xl flex items-center justify-center text-sky-600 text-2xl mb-3 shadow-inner">🎯</div>
+          <h3 class="text-lg font-bold text-slate-800">Utabiri wa Kitaalamu</h3>
+          <p class="text-slate-500 text-sm">Timu ya wachambuzi wenye uzoefu wa miaka 5+ betting, tunachambua mechi 50+ kila siku.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-4 rounded-xl bg-white/60 shadow-sm">
+          <div class="w-14 h-14 bg-sky-100 rounded-2xl flex items-center justify-center text-sky-600 text-2xl mb-3 shadow-inner">📈</div>
+          <h3 class="text-lg font-bold text-slate-800">Win Rate 78% Msimu huu</h3>
+          <p class="text-slate-500 text-sm">Takwimu halisi za ushindi kwenye Ligi Kuu England, La Liga, Serie A na Ligi za Tanzania.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-4 rounded-xl bg-white/60 shadow-sm">
+          <div class="w-14 h-14 bg-sky-100 rounded-2xl flex items-center justify-center text-sky-600 text-2xl mb-3 shadow-inner">⚡</div>
+          <h3 class="text-lg font-bold text-slate-800">Tips za Haraka WhatsApp</h3>
+          <p class="text-slate-500 text-sm">Marudio ya moja kwa moja kwenye simu yako, usikose mechi yoyote ya uhakika.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========= 5. WHAT THEY WILL RECEIVE INSIDE THE GROUP (BULLET LIST WITH VISUALS) ========= -->
+    <div class="mb-16 md:mb-20">
+      <div class="bg-gradient-to-br from-sky-50 to-white rounded-3xl p-6 md:p-9 border border-sky-200 shadow-card">
+        <div class="flex flex-col lg:flex-row gap-8 items-center">
+          <div class="flex-1">
+            <div class="inline-flex items-center gap-2 bg-sky-200/60 px-3 py-1 rounded-full mb-4">
+              <span class="text-sky-700 text-xs font-bold">🎁 WHAT'S INSIDE</span>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4">Utakachopata Kwenye Group Letu la WhatsApp</h2>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3"><span class="text-green-500 text-xl mt-0.5">✓</span><span class="text-slate-700"><span class="font-semibold">10+ Tips za Daily:</span> Over 2.5, BTTS, 1X2 na Combo za uhakika odds 1.70+</span></li>
+              <li class="flex items-start gap-3"><span class="text-green-500 text-xl mt-0.5">✓</span><span class="text-slate-700"><span class="font-semibold">VIP Analysis:</span> Breakdown ya timu, form, na injury za wachezaji muhimu</span></li>
+              <li class="flex items-start gap-3"><span class="text-green-500 text-xl mt-0.5">✓</span><span class="text-slate-700"><span class="font-semibold">Live Odds Comparison:</span> Nafasi bora za betting kwenye Betika, M-bet, Sportybet</span></li>
+              <li class="flex items-start gap-3"><span class="text-green-500 text-xl mt-0.5">✓</span><span class="text-slate-700"><span class="font-semibold">Jackpot & Multibet:</span> Picks za kila weekend za jackpot kubwa</span></li>
+              <li class="flex items-start gap-3"><span class="text-green-500 text-xl mt-0.5">✓</span><span class="text-slate-700"><span class="font-semibold">Community Support:</span> Watu wanaoshare na kucheers kila mmoja</span></li>
+            </ul>
+            <div class="mt-6 bg-sky-100/50 rounded-xl p-3 border-l-4 border-sky-500">
+              <p class="text-sm font-medium text-sky-800">🔥 Bonus ya Leo tu: Wanachama wapya wanapata tip 3 za uhakika kabla ya mechi za jioni</p>
+            </div>
+          </div>
+          <div class="flex-1 flex justify-center">
+            <div class="relative w-64 h-64 bg-white rounded-2xl shadow-xl flex flex-col items-center justify-center p-4 border border-sky-300 animate-float">
+              <div class="absolute -top-3 -right-3 bg-green-500 text-white text-[10px] font-bold rounded-full px-2 py-1 shadow-md">LIVE</div>
+              <div class="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center text-4xl mb-2">📱</div>
+              <p class="text-center text-slate-600 text-xs">Notification preview</p>
+              <div class="mt-3 bg-slate-50 rounded-lg p-2 w-full text-center border">
+                <p class="text-sm font-semibold text-sky-700">⚽ Betting Tip: Man Utd vs Brentford → Over 1.5 HT</p>
+                <p class="text-xs text-slate-500">Odds 1.92 • stake wisely</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========= 6. TESTIMONIALS & SOCIAL PROOF (real people reviews) ========= -->
+    <div class="mb-16 md:mb-20">
+      <div class="text-center mb-8">
+        <span class="text-sm font-semibold text-sky-600 bg-sky-100 px-4 py-1 rounded-full">⭐ Wanachama wanaozungumza ⭐</span>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mt-2">Maoni ya Wateja Wetu</h2>
+        <p class="text-slate-500 max-w-xl mx-auto mt-1">Zaidi ya reviews 500 za kuridhika</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="testimonial-card bg-white rounded-2xl p-5 shadow-soft border border-sky-100 transition-all">
+          <div class="flex gap-1 text-yellow-400 text-sm mb-2">★★★★★</div>
+          <p class="text-slate-600 italic text-sm">"Nimekuwa kwenye group hili miezi 3, sasa nahisi betting si bahati nasibu. Tips zao za BTTS zimenifanyia kazi kubwa, nimeshinda zaidi ya laki 8 kwa mwezi huu."</p>
+          <div class="flex items-center gap-3 mt-4">
+            <div class="w-10 h-10 rounded-full bg-sky-200 flex items-center justify-center font-bold text-sky-700">MK</div>
+            <div><p class="text-sm font-semibold text-slate-800">Michael K.</p><p class="text-[10px] text-slate-400">Mwanachama Taji</p></div>
+          </div>
+        </div>
+        <div class="testimonial-card bg-white rounded-2xl p-5 shadow-soft border border-sky-100 transition-all">
+          <div class="flex gap-1 text-yellow-400 text-sm mb-2">★★★★★</div>
+          <p class="text-slate-600 italic text-sm">"Nilianza bila ujuzi wowote, lakini kwa maelekezo na tips za kila siku nimeweza kujenga strategy. Wiki iliyopita nilitoka na Tsh 450k! Asanteni."</p>
+          <div class="flex items-center gap-3 mt-4">
+            <div class="w-10 h-10 rounded-full bg-sky-200 flex items-center justify-center font-bold text-sky-700">ZN</div>
+            <div><p class="text-sm font-semibold text-slate-800">Zainab N.</p><p class="text-[10px] text-slate-400">Arusha</p></div>
+          </div>
+        </div>
+        <div class="testimonial-card bg-white rounded-2xl p-5 shadow-soft border border-sky-100 transition-all">
+          <div class="flex gap-1 text-yellow-400 text-sm mb-2">★★★★★</div>
+          <p class="text-slate-600 italic text-sm">"Watu hawa ni professionals. Update za mechi za midnight zinawasili kabla ya kickoff. Nawapa asilimia 100, hakuna mtu mwingine anayetoa odds za 2.0+ mara kwa mara!"</p>
+          <div class="flex items-center gap-3 mt-4">
+            <div class="w-10 h-10 rounded-full bg-sky-200 flex items-center justify-center font-bold text-sky-700">HO</div>
+            <div><p class="text-sm font-semibold text-slate-800">Hamisi O.</p><p class="text-[10px] text-slate-400">Mwanza</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-6">
+        <div class="flex items-center gap-1 text-sky-500 text-xs"> <span class="font-bold">4.9</span> <span>★</span> <span class="text-slate-500">( based on 684 reviews )</span></div>
+      </div>
+    </div>
+
+    <!-- ========= 7. ONE STRONG CALL TO ACTION BUTTON (JOIN WHATSAPP GROUP) ========= -->
+    <div class="text-center py-8 md:py-12 bg-white/50 rounded-3xl border border-sky-200 shadow-soft backdrop-blur-sm mb-12">
+      <div class="max-w-2xl mx-auto px-4">
+        <span class="text-sm font-bold uppercase tracking-wider text-sky-600 bg-sky-100 px-4 py-1 rounded-full inline-block mb-4">Usikose nafasi</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-3">Uko Tayari Kugeuza Mchezo Wako?</h2>
+        <p class="text-slate-500 mb-8">Bonyeza kitufe hapa chini na ujiunge na WhatsApp group letu la wanaobet kitaalamu. Pata tip za leo kabla ya mechi kuanza!</p>
+        <!-- Replace with actual WhatsApp group invite link -->
+        <a href="#" id="whatsappJoinBtn" target="_blank" class="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-sky-500 to-sky-700 hover:from-sky-600 hover:to-sky-800 text-white text-lg md:text-xl font-bold py-5 px-10 rounded-2xl shadow-xl transition-all duration-300 transform hover:scale-105 focus:ring-4 focus:ring-sky-300 btn-ripple">
+          <span class="text-2xl">🔵</span> 
+          JIUNGE WHATSAPP GROUP SASA
+          <span class="absolute -top-1 -right-1 flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+          </span>
+        </a>
+        <p class="text-xs text-slate-400 mt-6">*hakuna spam, tips za uhakika tu. Over 300 wanachama wapya wiki hii.</p>
+      </div>
+    </div>
+
+    <!-- FOOTER (simple but trustworthy) -->
+    <footer class="border-t border-sky-200 pt-8 text-center text-slate-400 text-xs">
+      <p>© 2025 VatesBet Club — Betting tips kwa ajili ya wataalamu na wanaoanza. Kamata nafasi yako!</p>
+      <p class="mt-1">⚠️ Betting ina hatari, weka betting kwa burudani tu na usitumie pesa unazohitaji kwa mahitaji yako.</p>
+    </footer>
+  </main>
+
+  <!-- Simple interactive script: replace with actual WhatsApp group invite link -->
+  <script>
+    (function() {
+      const waBtn = document.getElementById('whatsappJoinBtn');
+      // 🔁 REPLACE THIS LINK WITH YOUR REAL WHATSAPP GROUP INVITE LINK BEFORE DEPLOYING
+      const REAL_WHATSAPP_LINK = 'https://chat.whatsapp.com/yourgroupinvitecode'; 
+      
+      if (waBtn) {
+        waBtn.addEventListener('click', function(e) {
+          if (REAL_WHATSAPP_LINK === 'https://chat.whatsapp.com/yourgroupinvitecode' || REAL_WHATSAPP_LINK === '#') {
+            e.preventDefault();
+            alert("🔧 [Demo Mode]: Please replace the WhatsApp group invite link.\n\nTo set your real link, open the code and change the 'REAL_WHATSAPP_LINK' variable to your actual WhatsApp invite URL (starts with https://chat.whatsapp.com/...).");
+          } else {
+            window.open(REAL_WHATSAPP_LINK, '_blank');
+          }
+        });
+      }
+    })();
+  </script>
+  <!-- Note: Replace REAL_WHATSAPP_LINK with actual invite URL before going live -->
+</body>
+</html>
