@@ -168,64 +168,6 @@
 .glow-pulse {
   animation: glowPulse 1.8s ease-in-out infinite;
 }
-
-/* Shake animation - infinity */
-@keyframes shake {
-  0%, 100% { 
-    transform: translateX(0) rotate(0deg);
-  }
-  10% { 
-    transform: translateX(-4px) rotate(-1deg);
-  }
-  20% { 
-    transform: translateX(4px) rotate(1deg);
-  }
-  30% { 
-    transform: translateX(-4px) rotate(-1deg);
-  }
-  40% { 
-    transform: translateX(4px) rotate(1deg);
-  }
-  50% { 
-    transform: translateX(-2px) rotate(-0.5deg);
-  }
-  60% { 
-    transform: translateX(2px) rotate(0.5deg);
-  }
-  70% { 
-    transform: translateX(-2px) rotate(-0.5deg);
-  }
-  80% { 
-    transform: translateX(2px) rotate(0.5deg);
-  }
-  90% { 
-    transform: translateX(-1px) rotate(0deg);
-  }
-  100% { 
-    transform: translateX(0) rotate(0deg);
-  }
-}
-
-.btn-shake {
-  animation: shake 0.8s ease-in-out infinite;
-}
-
-/* Shake ya polepole kama inavutia */
-@keyframes shakeSlow {
-  0%, 100% { 
-    transform: translateX(0) rotate(0deg);
-  }
-  25% { 
-    transform: translateX(-3px) rotate(-0.5deg);
-  }
-  75% { 
-    transform: translateX(3px) rotate(0.5deg);
-  }
-}
-
-.btn-shake-slow {
-  animation: shakeSlow 2s ease-in-out infinite;
-}
   </style>
 </head>
 <body class="bg-dark-100 text-white overflow-x-hidden">
@@ -260,32 +202,31 @@
       <h1 class="text-xl md:text-2xl font-black leading-[1.1] tracking-tighter mb-6 animate-fade-up" style="animation-delay: 0.1s">
         Win <span class="gradient-text">500K+</span><br>Every Single Day
       </h1>
-      <div class="animate-fade-up" style="animation-delay: 0.4s">
-  <div class="relative inline-block">
-    <!-- Glow effect -->
-    <div class="absolute -inset-1 bg-sky-400 rounded-2xl blur-xl opacity-75 animate-pulse"></div>
-    <div class="absolute -inset-1 bg-sky-400 rounded-2xl blur-2xl opacity-50 animate-pulse" style="animation-delay: 0.5s"></div>
-    
-    <!-- Button with shake class -->
-    <button onclick="handleJoin()" 
-      class="btn-ripple relative group bg-gradient-to-r from-sky-800 to-sky-900 hover:from-cyan-800 hover:to-sky-blue text-white font-bold py-2 px-10 rounded-xl text-lg shadow-xl shadow-blue-500/30 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3 border border-sky-400/20 btn-shake">
-      
-      <span class="text-xl">🟢</span> 
-      Join WhatsApp Group Now
-      
-      <!-- Sparkle dots -->
-      <span class="absolute -top-1 -right-1 flex h-3 w-3">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-400"></span>
-      </span>
-      <span class="absolute -bottom-1 -left-1 flex h-2 w-2">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" style="animation-delay: 0.7s"></span>
-        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
-      </span>
-    </button>
-  </div>
-  <p class="text-white/30 text-sm mt-5">No spam · Expert tips only · 300+ new members this week</p>
-</div>
+       <div class="animate-fade-up" style="animation-delay: 0.4s">
+        <div class="relative inline-block">
+          <!-- Glow effect behind button - inawaka na kuzima kila mara -->
+          <div class="absolute -inset-1 bg-sky-400 rounded-2xl blur-xl opacity-75 animate-pulse"></div>
+          <div class="absolute -inset-1 bg-sky-400 rounded-2xl blur-2xl opacity-50 animate-pulse" style="animation-delay: 0.5s"></div>
+          
+          <button onclick="handleJoin()" 
+            class="btn-ripple relative group bg-gradient-to-r from-sky-800 to-sky-900 hover:from-cyan-800 hover:to-sky-blue text-white font-bold py-2 px-10 rounded-xl text-lg shadow-xl shadow-blue-500/30 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3 border border-sky-400/20">
+            
+            <span class="text-xl">🟢</span> 
+            Join WhatsApp Group Now
+            
+            <!-- Sparkle dots -->
+            <span class="absolute -top-1 -right-1 flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-400"></span>
+            </span>
+            <span class="absolute -bottom-1 -left-1 flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" style="animation-delay: 0.7s"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
+            </span>
+          </button>
+        </div>
+        <p class="text-white/30 text-sm mt-5">No spam · Expert tips only · 300+ new members this week</p>
+      </div>
       <p class="text-white/50 text-lg md:text-xl max-w-xl mx-auto leading-relaxed mb-8 animate-fade-up" style="animation-delay: 0.2s">
         Join thousands of smart bettors receiving expert Over 2.5, BTTS & 1X2 tips daily — with a proven 78% win rate.
       </p>
